@@ -17,7 +17,7 @@ const Header = () => {
         <div className="container-fluid bg-dark">
         <div className="row align-items-center ">
           <div className="col-md-3">
-            <h1 className="text-danger fs-1">BOOLFLIX</h1>
+            <h1 className="text-danger fs-1 fw-5">BOOLFLIX</h1>
           </div>
           <div className="col-md-9">
             <form
