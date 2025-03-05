@@ -1,12 +1,14 @@
-import { useState } from 'react';
-// import Header from './components/Header.jsx';
+import { GlobalProvider } from './context/GlobalContext';
+import Header from './components/Header.jsx';
 import Main from './components/Main.jsx';
 
 function App() {
   return (
-    <> 
-      {/* <Header /> */}
-      <Main />
+    <>
+      <GlobalProvider>
+        <Header />
+        <Main />
+      </GlobalProvider>
     </>
   );
 }
