@@ -13,17 +13,30 @@ const Header = () => {
         handleSeries()
     }, []);
 
-    return(
-        <div className="container d-flex justify-space-around">
-                <h1>BOOLFLIX</h1>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Cosa vuoi guardare?"
-                        // value={film}
-                        onChange={handleInput} />
-                </form>
-            </div>
+    return (
+        <div className="container-fluid bg-dark">
+        <div className="row align-items-center ">
+          <div className="col-md-3">
+            <h1 className="text-danger fs-1">BOOLFLIX</h1>
+          </div>
+          <div className="col-md-9">
+            <form
+              className="d-flex justify-content-end"
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="text"
+                onChange={handleInput}
+                placeholder="Cerca un film..."
+                className="m-2 form-control w-50 custom-input"
+              />
+              <button className="btn btn-outline-danger m-2" tipe="submit">
+                Cerca
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     )
 }
 
