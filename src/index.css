@@ -2,3 +2,44 @@ header {
     display: flex !important;
     justify-content: space-around !important;
 }
+
+.info {
+    color: white;
+    display: none;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    max-height: 80%;  
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+.info p {
+    margin-bottom: 5px; 
+    padding: 0 5px; 
+}
+
+.locandine:hover .info{
+    display: block;
+}
+
+.sfondo{
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.locandine:hover .sfondo{
+    opacity: 0.1;
+}
+
+.locandine {
+    position: relative;
+    overflow: hidden;
+}
+

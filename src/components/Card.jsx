@@ -14,40 +14,45 @@ const Card = () => {
     }
 
     return (
-        <div>
-            <h2>Film</h2>
-            <div className="row row-cols-4 mx-auto">
-                {film.map((e) => {
-                    return (
+        <div className="bg-dark">
+            <div className="container">
+                <h2 className="text-white">Film</h2>
+                <div className="row row-cols-4 mx-auto">
+                    {film.map((e) => {
+                        return (
+                            <div className="card text-center text-white gap-3 bg-dark locandine" key={e.id}>
+                                <img className="card-img-top sfondo" src={img + "w342/" + e.poster_path} />
+                                <>
+                                    <div className="info">
+                                        <p>{e.title}</p>
+                                        <p>{e.original_title}</p>
+                                        <p className={`fi fi-${e.original_language = "en" ? "gb" : null}`}></p>
+                                        <p>{Stars(e.vote_average)}</p>
+                                        <p>{e.overview}</p>
+                                    </div>
+                                </>
+                            </div>
+                        )
+                    }
+                    )}
+                </div>
 
-                        <div className="card" key={e.id}>
-                            <img className="card-img-top" src={img + "w342/" + e.poster_path} />
-                            <>
-                                <h1>{e.title}</h1>
-                                <h2>{e.original_title}</h2>
-                                <h2 className={`fi fi-${e.original_language = "en" ? "gb" : null}`}></h2>
-                                <h2>{Stars(e.vote_average)}</h2>
-                            </>
-                        </div>
-                    )
-                }
-                )}
-            </div>
 
 
-            <div>
-                <h2>Serie TV</h2>
+                <h2 className="text-white pt-5">Serie TV</h2>
                 <div className="row row-cols-4 mx-auto">
                     {serie.map((e) => {
                         return (
-
-                            <div className="card" key={e.id}>
-                                <img className="card-img-top" src={img + "w342/" + e.poster_path} />
+                            <div className="card text-center text-white gap-3 bg-dark locandine" key={e.id}>
+                                <img className="card-img-top sfondo" src={img + "w342/" + e.poster_path} />
                                 <>
-                                    <h1>{e.name}</h1>
-                                    <h2>{e.name}</h2>
-                                    <h2 className={`fi fi-${e.original_language = "en" ? "gb" : null}`}></h2>
-                                    <h2>{Stars(e.vote_average)}</h2>
+                                    <div className="info">
+                                        <p>{e.name}</p>
+                                        <p>{e.name}</p>
+                                        <p className={`fi fi-${e.original_language = "en" ? "gb" : null}`}></p>
+                                        <p>{Stars(e.vote_average)}</p>
+                                        <p>{e.overview}</p>
+                                    </div>
                                 </>
                             </div>
                         )
@@ -56,6 +61,7 @@ const Card = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 

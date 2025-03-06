@@ -36,7 +36,7 @@ const GlobalProvider = ({ children }) => {
             },
         };
 
-        fetch(apiUrl + `movie?query=${search}`, options)
+        fetch(apiUrl + `movie?query=${search}&language=it-IT`, options)
             .then(res => res.json())
             .then(data => {
                 setFilm(data.results)
