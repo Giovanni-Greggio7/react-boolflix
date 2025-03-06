@@ -14,7 +14,6 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.8); 
     max-height: 80%;  
     overflow-y: auto; 
     overflow-x: hidden; 
